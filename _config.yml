@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Two days of RubyOnRails development around the Eastern Cape.
   By the ICT4G FBK guys.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://ict4g.github.io/ror-ec-2014" # the base hostname & protocol for your site
 twitter_username: ict4g_fbk
 github_username:  ict4g
 
