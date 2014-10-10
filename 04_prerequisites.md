@@ -41,7 +41,7 @@ Finally, if you work on <i class="fa fa-windows"></i> __MS Windows™__, you hav
 
 ## Using Ubuntu on a VirtualBox on MS Windows™ on your PC
 
-After having installed [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and the Extenstion Pack, download [this Ubuntu 14.04.1 LTS Virtual Machine][vm_download] (approx 1.7GB) we created specifically for the workshop.
+After having installed [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and the Extenstion Pack, download [this Ubuntu 14.04.1 LTS Virtual Machine][vm_download] (approx 2.1GB) we created specifically for the workshop.
 
 Once the download is finished double click on the file, Select "_Reinitialize the MAC address for all the cards_" and it will automatically add a VM called "_RoR-SA-14.04.1_" to your VirtualBox. 
 
@@ -54,4 +54,4 @@ Once you are in, open a Terminal (Ctrl+Alt+T) and [setup your Github account](ht
 
 Now you have a fully operational RoR environment on your computer! Cool.
 
-[vm_download]: #
+[vm_download]: http://ict4g.org/ror-ec-2014-files/RoR-SA-14.04.1.ova
