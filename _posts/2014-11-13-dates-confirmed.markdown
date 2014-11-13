@@ -8,10 +8,22 @@ Great news guys!
 
 Here are the dates for the workshops:
 
-* Nov. 18th @ Fort Hare University from 9 am to 1 pm
-* Nov. 21th @ East London from 9 am to 6 pm
-* Nov. 25th @ Fort Hare University from 9 am to 1 pm
+* **Nov. 18th** from **09h00** to **13h00** <br>
+@ Computer Science Department, *Fort Hare University*
 
-Check [this page]({{site.url}}/where-and-when) to get the latest updates about the exact place in each location.
+
+* **Nov. 21th** from **09h00** to **16h00** <br>
+@ Eastern Cape Information Technology Initiative (ECITI), *eMonti Science & Technology Park, Zone 1C, East London IDZ, Sunnyridge, East London*
+
+
+* **Nov. 24th** from **09h00** to **13h00** <br>
+@ Computer Science Department, *Fort Hare University*
+
+
+* **Nov. 27th** from **09h00** to **16h00** <br>
+@ Media Centre SNII, *51 Newton Street, Landbank Building, Port Elizabeth* 
+
+
+Check [this page]({{site.url}}/where-and-when) to get the latest updates about the exact locations in each place.
 
 Stay tuned!
