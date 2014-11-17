@@ -39,74 +39,118 @@
         <section>
           <h1>More gems</h1>
           <h2>for our app</h2>
-          <h4>with what you like</h4>
           <code>#rorec14 #THIS_PLACE</code>
         </section>
         <section>
-          <h2>a load of gems</h2>
+          <h1>booty of gems</h1>
           <h3>
-            If you want to do something, there is probably a gem for that.
+            If you want to do something,<br> there is probably a gem for that.
           </h3>
-          <p>How to find gems? <span class="fragment">Use Google</span></p>
-          <p>How to choose among gems that do the same thing? <span class="fragment">Use <a href="https://www.ruby-toolbox.com">Ruby Toolbox</a></span></p>
+          <ul>
+            <li>How to find gems? <span class="fragment">Use Google, Stackoverflow, etc.</span></li>
+            <li>How to choose among gems that do the same thing?
+              <span class="fragment">Use <a href="https://www.ruby-toolbox.com">Ruby Toolbox</a></span>
+            </li>
+          </ul>
         </section>
         <section>
           <section>
             <h1>Front End</h1>
           </section>
+
+          <!-- fontawesome -->
           <section>
             <h2><code>fontawesome</code></h2>
             <p>
-              awesome icons for your application
+              awesome vector icons for our application
             </p>
             <pre><code class="ruby">
   # Gemfile
 
   gem 'font-awesome-sass'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="ruby">
+  <%= icon 'edit', 'Edit' %>
+              </code></pre>
+            </p>
           </section>
+
+          <!-- Gmaps4Rails -->
           <section>
             <h2><code>Gmaps4Rails</code></h2>
             <p>
-              integrate GoogleMaps in your app
+              integrate GoogleMaps in our app
             </p>
             <pre><code class="ruby">
   # Gemfile
 
   gem 'gmaps4rails'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="ruby">
+  @users = User.all
+  @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+    marker.lat user.latitude
+    marker.lng user.longitude
+  end
+              </code></pre>
+              <pre><code class="ruby">
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+              </code></pre>
+            </p>
           </section>
+
+          <!-- Paperclip -->
           <section>
             <h2><code>Paperclip</code></h2>
             <p>
-              attach files to your models
+              attach files to our models
             </p>
             <pre><code class="ruby">
   # Gemfile
 
   gem 'paperclip'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="ruby">
+  has_attached_file :avatar
+              </code></pre>
+              <pre><code class="erb">
+  <%= image_tag user.avatar.url %>
+              </code></pre>
+            </p>
           </section>
+
+          <!-- Gettext -->
           <section>
             <h2><code>Gettext</code></h2>
             <p>
-              i18nalize your text strings
+              i18nalize our text strings
             </p>
             <pre><code class="ruby">
   # Gemfile
 
   gem 'gettext_i18n_rails'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="erb">
+  <h1><%= _('New Product') %></h1>
+              </code></pre>
+            </p>
           </section>
         </section>
+
         <section>
           <section>
             <h1>Back End</h1>
           </section>
+
+          <!-- CanCanCan -->
           <section>
             <h2><code>CanCanCan</code></h2>
             <p>
@@ -117,8 +161,15 @@
 
   gem 'cancancan'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="ruby">
+  if @producer.can? :edit, @product
+              </code></pre>
+            </p>
           </section>
+
+          <!-- Geocoder -->
           <section>
             <h2><code>Geocoder</code></h2>
             <p>
@@ -129,20 +180,37 @@
 
   gem 'geocoder'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="ruby">
+  geocoded_by :address
+              </code></pre>
+              <pre><code class="ruby">
+  Producer.near 'Grahamstown', 20
+              </code></pre>
+            </p>
           </section>
+
+          <!-- Delayed -->
           <section>
             <h2><code>Delayed Jobs</code></h2>
             <p>
-              manage your async tasks
+              manage our async tasks
             </p>
             <pre><code class="ruby">
   # Gemfile
 
   gem 'delayed_job_active_record'
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="ruby">
+  @user.delay.activate!
+              </code></pre>
+            </p>
           </section>
+
+          <!-- Capistrano -->
           <section>
             <h2><code>Capistrano</code></h2>
             <p>
@@ -153,13 +221,20 @@
 
   >> gem install capistrano
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="bash">
+  >> cap deploy production
+              </code></pre>
+            </p>
           </section>
         </section>
         <section>
           <section>
             <h1>Debug</h1>
           </section>
+
+          <!-- Mailcatcher -->
           <section>
             <h2><code>Mailcatcher</code></h2>
             <p>
@@ -170,12 +245,19 @@
 
   >> gem install mailcatcher
             </code></pre>
-            <p>example</p>
+            <p>
+              example
+              <pre><code class="bash">
+  >> mailcatcher
+              </code></pre>
+            </p>
           </section>
+
+          <!-- BetterErrors -->
           <section>
             <h2><code>BetterErrors</code></h2>
             <p>
-              addresses to LatLng and viceversa
+              a powerful <code>rails console</code> in the error page
             </p>
             <pre><code class="ruby">
   # Gemfile
@@ -185,7 +267,12 @@
       gem 'binding_of_caller'
   end
             </code></pre>
-            <p>example</p>
+            <p>
+              example in the next slide
+            </p>
+          </section>
+          <section>
+            <img src="img/better-errors.png">
           </section>
         </section>
       </div>
