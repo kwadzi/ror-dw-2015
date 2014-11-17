@@ -1,0 +1,26 @@
+<div class="col-md-9">
+  <h2><%= current_user == producer ? "You" : producer.name %></h2>
+  <p><%= producer.address %></p>
+  <p>Email: <%= mail_to producer.email %> Tel: <%= link_to producer.phone, "tel:#{producer.phone}" %><p>
+</div>
+<div class="col-md-3">
+  <%= link_to 'Edit', edit_producer_path(producer), class: 'btn btn-info' %>
+  <%= link_to 'Delete', producer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>
+<div class="col-md-10 col-sx-12">
+  <% if producer.products.any? %>
+    <p>
+      <strong>Products:</strong>
+    </p>
+    <ul>
+      <% producer.products.limit(3).each do |product| %>
+        <li><%= product.name %> (<%= price_tag_for product %>)</li>
+      <% end %>
+      <li><%= link_to 'See all', producer_products_path(producer) %></li>
+    </ul>
+  <% else %>
+    <p><strong>No products yet!</strong></p>
+  <% end %>
+
+  <p><%= link_to 'New product', new_producer_product_path(producer) %></p>
+</div>

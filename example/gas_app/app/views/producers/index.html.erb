@@ -1,0 +1,18 @@
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+    <p><strong><%= flash[:error] %></strong></p>
+  </div>
+<% end %>
+
+<h1>Producers</h1>
+
+<% @producers.each do |producer| %>
+  <div class="row">
+    <%= render 'show', producer: producer %>
+  </div>
+  <hr>
+<% end %>
+
+<br>
+
+<%= link_to('New Producer', new_producer_path, class: 'btn btn-lg btn-success') unless logged_in? %>
