@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to RubyOnRails Workshop 2014</title>
+
+    <meta name="description" content="Intro to SSRoR 2013">
+    <meta name="author" content="ICT4g">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Welcome to</h2>
+          <h1>RoR-EC-14<span class="fragment">*</span></h1>
+          Alice - East London - Port Elizabeth, <br>
+          South Africa, Nov. 18 - 27 2014<br><br>
+          <p>
+            <small class="fragment roll-in">* it means Ruby on Rails in the Eastern Cape 2014</small>
+          </p>
+        </section>
+        <section>
+          <h1><code>#rorec14</code></h1>
+          <h2><code>#FortHare</code></h2>
+          <h2><code>#EastLondon</code></h2>
+          <h2><code>#PortElizabeth</code></h2>
+        </section>
+        <section>
+          <h2>a few basic rules</h2>
+          <p>This course is</p>
+          <ol>
+            <li class="fragment">informal</li>
+            <li class="fragment">interactive
+              <ul>
+                <li class="fragment">so interrupt us at any time</li>
+                <li class="fragment">and feel free to discuss</li>
+                <li class="fragment">you are <strong>expected</strong> to interrupt and dicuss</li>
+              </ul>
+            </li>
+            <li class="fragment">practical
+              <ul>
+                <li class="fragment">work on real stuff</li>
+                <li class="fragment">learn-by-doing</li>
+                <li class="fragment">discover on your own</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <section>
+            <h2>your instructors</h2>
+            <br>
+            <div class="fragment roll-in" style="float: left; width: 50%">
+              <img src="img/aaronCiaghi.jpg" width="200"><br>
+              aaron ciaghi<br>
+              <small>@a2ronsama</small>
+            </div>
+            <div class="fragment roll-in" style="float: left; margin-top: 40px; width: 50%">
+              <img src="img/fotopietro.jpg" width="200"><br>
+              pietro molini<br>
+              <small>@andareverso</small>
+          </section>
+          <section>
+            <h1>get in touch</h1>
+            <br>
+            <p><strong>Aaron</strong><br>
+              <img src="img/email.png" style="margin: 0px; border: none"> <a href="mailto:ciaghi@fbk.eu">ciaghi@fbk.eu</a> <img src="img/skype.png" style="margin: 0px; border: none"> a2ron-sama <img src="img/twitter.png" style="margin: 0px; border: none"> @a2ronsama
+            </p>
+            <p><strong>Pietro</strong><br>
+              <img src="img/email.png" style="margin: 0px; border: none"> <a href="mailto:pbmolini@fbk.eu">pbmolini@fbk.eu</a> <img src="img/skype.png" style="margin: 0px; border: none"> pietromolini <img src="img/twitter.png" style="margin: 0px; border: none"> @andareverso
+            </p>
+          </section>
+          <section>
+            <h2>reference persons</h2>
+            <ul>
+              <li>Sibukele Gumbo – Super manager</li>
+              <li>Mamello Thinyane – Fort Hare</li>
+              <li>Olga – East London</li>
+              <li>Ellen – Port Elizabeth</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>who we are</h1>
+          </section>
+          <section>
+            <h1>FBK</h1>
+            <p><small><a href="http://www.fbk.eu">www.fbk.eu</a></small></p>
+            <p>Fondazione Bruno Kessler is a private/public research centre located in Trentino, Italy.</p>
+            <ul>
+              <li>500+ international researchers</li>
+              <li>3 main scientific areas: IT, Microelectronics, Historical studies</li>
+
+            </ul>
+          </section>
+          <section>
+            <h1>ICT4g</h1>
+            <p><small><a href="http://www.ict4g.org">www.ict4g.org</a></small></p>
+            <p>fostering socio-economic development in ICT</p>
+            <ul>
+              <li>Maputo Living Lab and Summer Schools</li>
+              <li><a href="http://ict4g.github.com/rhok-trento">RHoK</a></li>
+              <li><a href="http://www.bringfood.org">BringTheFood</a></li>
+              <li><a href="http://www.comebutta.it">ComeButta</a></li>
+              <li><a href="http://ict4sa/samo">SAMo</a></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>what we will see today</h2>
+            <ol>
+              <li>Intro to Webapps and Ruby on Rails</li>
+              <li>A bit of Ruby language</li>
+              <li>Develop an app</li>
+            </ol>
+          </section>
+          <section>
+            <h2>intro to Webapps and RoR</h2>
+            <p>learn the basics of developing web apps with Ruby on Rails</p>
+            <ul>
+              <li>Introduction to web applications</li>
+              <li>Model View Controller</li>
+              <li>Some concepts: Agile, DRY, REST</li>
+              <li>Intro to Ruby and Gems</li>
+              <li>Tools we use</li>
+              <li>Useful links</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Some Ruby</h2>
+            <p>a bit of fancy Ruby code</p>
+            <ul>
+              <li>numbers, strings, arrays</li>
+              <li>variables, methods' call</li>
+              <li>hashes</li>
+              <li>control flow, cycles</li>
+              <li>methods' definition, classes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>how to develop an app</h2>
+            <p>working on a <strong>real app</strong> from the ground up</p>
+            <ul>
+              <li>the final result</li>
+              <li>app creation (with scaffolding)</li>
+              <li>views and assets</li>
+              <li>CRUD and validations</li>
+              <li>authentication</li>
+              <li>gem showcase</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>let's get started</h1>
+          <small>questions?</small>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
