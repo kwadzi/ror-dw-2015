@@ -1,13 +1,14 @@
 <div class="col-md-9">
   <h2><%= current_user == producer ? "You" : producer.name %></h2>
-  <p><%= producer.address %></p>
-  <p>Email: <%= mail_to producer.email %> Tel: <%= link_to producer.phone, "tel:#{producer.phone}" %><p>
+  <p><%= link_to icon('map-marker', producer.address), '#' %></p>
+  <p><%= mail_to producer.email, icon('envelope', producer.email) %> <%= link_to (icon 'phone', producer.phone), "tel:#{producer.phone}" %><p>
 </div>
 <div class="col-md-3">
-  <%= link_to 'Edit', edit_producer_path(producer), class: 'btn btn-info' %>
-  <%= link_to 'Delete', producer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+  <%= link_to icon('edit', 'Edit'), edit_producer_path(producer), class: 'btn btn-info' %>
+  <%= link_to icon('trash','Delete'), producer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 </div>
 <div class="col-md-10 col-sx-12">
+  <br>
   <% if producer.products.any? %>
     <p>
       <strong>Products:</strong>
@@ -22,5 +23,5 @@
     <p><strong>No products yet!</strong></p>
   <% end %>
 
-  <p><%= link_to 'New product', new_producer_product_path(producer) %></p>
+  <p><%= link_to icon('plus','New product'), new_producer_product_path(producer) %></p>
 </div>

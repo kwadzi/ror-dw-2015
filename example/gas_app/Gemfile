@@ -38,8 +38,29 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Gems used in tutorial
+
 gem 'bootstrap-sass', '~> 3.3.1'
-
 gem 'autoprefixer-rails'
-
 gem 'sorcery'
+
+# Gems shown at the end of the WS
+
+#frontend
+gem 'font-awesome-sass'
+gem 'gmaps4rails'
+gem "paperclip", "~> 4.2"
+gem 'gettext_i18n_rails'
+gem 'gettext', '>=3.0.2', require: false, group: [:development]
+gem 'ruby_parser', require: false, group: [:development]
+
+#backend
+gem 'cancancan', '~> 1.9'
+gem 'geocoder'
+gem 'delayed_job_active_record'
+
+#debug
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end

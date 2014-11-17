@@ -759,7 +759,7 @@ before_action :require_login, except: [:index, :show]
 
 This is provided by `sorcery` and we don't need to do anything else. Of course it's ugly and it doesn't take into account the user (everyone can modify everything when logged in). There are more sophisticated gems for that...
 
-10. Carousel of gems
+10. A load of gems
 -------------------
 
 Switch to the presentation. The important message to pass is that:
@@ -772,19 +772,19 @@ Some gems that we talk about
 
 ### Front-end
 
-* Fontawesome
-* Gmaps4Rails
-* Paperclip
-* Gettext
+* **Fontawesome:** a lot of icons and a convenient helper method
+* **Gmaps4Rails:** integrate Google Maps into your app (use Leaflet.js if you want something more advanced, but it will require much more javascript)
+* **Paperclip:** add attachments to your models (e.g. product images or user avatars)
+* **Gettext:** translate your app using `.po` files
 
 ### Back-end
 
-* CanCanCan
-* Geocoder
-* Delayed Jobs
-* Capistrano
+* **CanCanCan:** authorization made simple
+* **Geocoder:** address -> lat/lon -> address and more
+* **Delayed Jobs:** run tasks at set times without interrupting execution
+* **Capistrano:** deploy on remote servers (almost) painlessly
 
 ### Debug
 
-* Mailcatcher
-* Better errors
+* **Mailcatcher:** test your emails
+* **Better errors:** understand your errors and get a Rails console where you need it
