@@ -24,6 +24,6 @@ Here are the dates for the workshops:
 @ Media Centre SNII, *51 Newton Street, Landbank Building, Port Elizabeth* 
 
 
-Check [this page]({{site.url}}/where-and-when) to get the latest updates about the exact locations in each place.
+Check [this page]({{ "/where-and-when" | prepend: site.baseurl }}) to get the latest updates about the exact locations in each place.
 
 Stay tuned!
