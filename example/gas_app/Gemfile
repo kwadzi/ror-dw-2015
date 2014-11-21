@@ -49,10 +49,11 @@ gem 'sorcery'
 #frontend
 gem 'font-awesome-sass'
 gem 'gmaps4rails'
+gem 'underscore-rails' #required by gmaps4rails
 gem "paperclip", "~> 4.2"
-gem 'gettext_i18n_rails'
-gem 'gettext', '>=3.0.2', require: false, group: [:development]
-gem 'ruby_parser', require: false, group: [:development]
+# gem 'gettext_i18n_rails'
+# gem 'gettext', '>=3.0.2', require: false, group: [:development]
+# gem 'ruby_parser', require: false, group: [:development]
 
 #backend
 gem 'cancancan', '~> 1.9'

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :producers do
     resources :products
+    collection do
+      get 'map'
+    end
   end
 
   resources :producer_sessions, only: [:new, :create, :destroy]

@@ -15,4 +15,8 @@
 
 <br>
 
-<%= link_to('New Producer', new_producer_path, class: 'btn btn-lg btn-success') unless logged_in? %>
+<div class="row">
+  <div class="col-md-12">
+    <p><%= link_to('New Producer', new_producer_path, class: 'btn btn-lg btn-success') unless (logged_in? || cannot?(:create, Producer)) %></p>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 class ProducersController < ApplicationController
+  authorize_resource
+
   before_action :set_producer, only: [:show, :edit, :update, :destroy]
   before_action :not_logged_in, only: [:new, :create]
   before_action :require_login, only: [:edit, :update, :destroy]
@@ -12,6 +14,13 @@ class ProducersController < ApplicationController
   # GET /producers/1
   # GET /producers/1.json
   def show
+  end
+
+  def map
+    @markers = Gmaps4rails.build_markers(Producer.all) do |producer, marker|
+      marker.lat producer.latitude
+      marker.lng producer.longitude
+    end
   end
 
   # GET /producers/new
