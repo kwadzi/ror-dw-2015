@@ -2,4 +2,3 @@ _site
 .sass-cache
 _deploy.yml
 .deploy
-slides/

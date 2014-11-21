@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Intro to Web Applications</title>
+
+  <meta name="description" content="Intro to Web Applications">
+  <meta name="author" content="ICT4g">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>getting started</h1>
+          <h2>with Webapps and Rails</h2>
+        </section>
+        <section>
+          <h1>the hottest web technology right now</h1>
+          <h2><small>you may have heard of Twitter...</small></h2>
+        </section>
+        <section>
+          <h1><strong>Ruby</strong> <small>programming language</small></h1>
+          <h1><strong>Rails</strong> <small>framework for building web applications</small></h1>
+        </section>
+        <section>
+          <section>
+            <blockquote>
+              "Ruby on Rails is a breakthrough in lowering the barriers of entry to programming. Powerful web applications that formerly might have taken weeks or months to develop can be produced in a matter of days."
+            </blockquote>
+            <p style="text-align:right"><small>-Tim O'Reilly, Founder of O'Reilly Media</small></p>
+          </section>
+          <section>
+            <blockquote>
+              "Ruby on Rails is astounding. Using it is like watching a kung-fu movie, where a dozen bad-ass frameworks prepare to beat up the little newcomer only to be handed their asses in a variety of imaginative ways."
+            </blockquote>
+            <p style="text-align:right"><small>-Nathan Torkington, O'Reilly Program Chair for OSCON</small></p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>what's a webapp anyway?</h2>
+            <div class="fragment">
+              <blockquote>
+                A web application is an application utilizing web and [web] browser technologies to accomplish one or more tasks over a network, typically through a [web] browser.
+              </blockquote>
+              <p style="text-align:right"><small>-Jarel Remick, AppStorm</small></p>
+            </div>
+          </section>
+          <section>
+            <h2>let's break it down</h2>
+            <ul>
+              <li class="fragment roll-in"><em>application [Software]</em> "Application software, also known as an application or an ‘app’, is computer software designed to help the user to perform singular or multiple related specific tasks." - Wikipedia</li>
+              <li class="fragment roll-in"><em>web technologies</em> Flash, Silverlight, JavaScript, HTML & CSS, Java, various other programming languages and other computer technology intended for the use across networks.</li>
+              <li class="fragment roll-in"><em>network</em> The internet or intranet.</li>
+              <li class="fragment roll-in"><em>browser</em> Firefox, Chrome, Safari, Opera, Internet Explorer and various others.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>client side</h2>
+            <h3>static content</h3>
+            <p>HTML, CSS and images</p><br>
+            <h3>dynamic content</h3>
+            <p>client-side scripts (e.g., JS)</p>
+            <div class="fragment roll-in">
+              <p>flash content (if you live in 2004)</p>
+              <p>Java applets (if you live in the '90s)</p>
+            </div>
+          </section>
+          <section>
+            <h2>server side</h2>
+            <p>server side code to dynamically generate HTML</p>
+            <p>(PHP, Java, Ruby, ..)</p><br>
+            <p>a <em>Framework</em> (Zend, Django, JSF, Rails...)</p>
+            <p>or a <em>CMS</em> (Drupal, WordPress, Joomla, ...) which is a web application by itself</p>
+          </section>
+          <section>
+            <h1><em>webapp</em><br>&ne;<br><em>website</em><br>?</h1>
+          </section>
+        </section>
+        <section>
+          <h1>let's talk about Rails</h1>
+        </section>
+        <section>
+          <section>
+            <h1><div class="highlight">Ruby</div> on Rails</h1>
+            <ul>
+              <li>Open Source (<a href="http://github.com/rails/rails" target="_blank">Source code</a>)</li>
+              <li>Released: 2003</li>
+              <li>Full stack web framework written in Ruby</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>full stack... what?</h2>
+            <p>
+              <u>it abstracts and manages all parts of a web application:</u>
+            </p>
+            <ul>
+              <li>the database (model)</li>
+              <li>HTML/visualization (view)</li>
+              <li>request flow (controller)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>MVC</h2>
+            <img src="img/mvc_schematic.png" class="fragment roll-in">
+          </section>
+
+          <section>
+            <h2>model</h2>
+            <ul>
+              <li>maps a table in the database with a ruby object</li>
+              <li>validates your data before saving them</li>
+              <li>here you manipulate your data</li>
+              <li>here you add associations</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>controller</h2>
+            <ul>
+              <li>each method is a function that your application exposes</li>
+              <li>controls the flow of the request</li>
+              <li>exposes your data to views</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>views</h2>
+            <ul>
+              <li>show data to the user (in various format: html, csv, pdf..)</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Rails philosophy</h2>
+          <ul>
+            <li><em>Agile</em> development</li>
+            <li><em>Ruby</em> <code>=&gt;</code> less and more readable code, shorter development times, simple but powerful, no compilation</li>
+            <li>MVC, DRY, Testing</li>
+            <li>convention over configuration</li>
+            <li>SQL and JavaScript are abstracted</li>
+            <li>AJAX and REST</li>
+            <li>excellent community, tools, and documentation</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Agile development</h2>
+          <p><small>in 1 slide</small></p>
+          <ul>
+            <li>Individuals and interactions over processes and tools</li>
+            <li>Working software over comprehensive documentation</li>
+            <li>Customer collaboration over contract negotiation</li>
+            <li>Responding to change over following a plan</li>
+          </ul>
+          <br>
+          <p style="text-align: right">-<a href="http://agilemanifesto.org/">Agile Manifesto</a></p>
+        </section>
+        <section>
+          <section>
+            <h2>Ruby</h2>
+            <ul>
+              <li>Pure Object Oriented (everything is an object)</li>
+              <li>Dynamic</li>
+              <li>Concise</li>
+              <li>Very intuitive and readable</li>
+            </ul>
+          </section>
+          <section>
+            <h2>some examples</h2>
+            <pre><code contenteditable>
+              array = [1, 2, 3]
+              array.each do |element|
+                puts element + 1
+              end
+
+              10.times { puts "Hello there!" }
+            </code></pre>
+            <p class="fragment roll-in">more later...</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>convention over configuration</h2>
+            Rails uses standard names and a standard directory structure for every webapp
+            <pre class="fragment roll-in"><code class="bash">
+              app
+              |-- assets
+              |-- controllers
+              |-- helpers
+              |-- mailers
+              |-- models
+              `-- views
+            </code></pre>
+          </section>
+          <section>
+            <h2>for example</h2>
+            <p>if we have a model called <code>Book</code>, Rails will assume the following directory structure</p>
+            <pre><code class="bash">
+              app
+              |-- controllers
+              |   `-- books_controller.rb
+              |-- models
+              |   `-- book.rb
+              `-- views
+                  `-- books
+                      |-- index.html.erb
+                      |-- new.html.erb
+                      |-- edit.html.erb
+                      `-- ...
+            </code></pre>
+            <p class="fragment">and it will know that there is a table called <code>books</code> in the DB</p>
+          </section>
+          <section>
+            <h2>views are rendered automatically</h2>
+            in our example, <code>books_controller</code> will automatically render views if they are named correctly
+            <pre><code class="ruby">
+              class BooksController &lt; ActiveController
+                def index
+                  # renders app/views/books/index.html.erb
+                  # no need to write anything here!
+                end
+
+                def new
+                  # renders app/views/books/new.html.erb
+                  # and I don't need to write anything here!
+                end
+              end
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>DRY</h2>
+          <em>Don't Repeat Yourself</em>
+          <p>The MVC architecture in Rails and the features of Ruby reduce code duplication to (near) 0 <strong class="fragment">(ZERO)</strong></p><br>
+          <p class="fragment">(you don't get it for free. It's also up to you)</p><br>
+          <p class="fragment">you'll soon hear about <em class="fragment">partials,</em> <em class="fragment">helpers,</em> <em class="fragment">gems, ...</em></p>
+        </section>
+        <section>
+          <section>
+            <h2>REST</h2>
+            <h3><em>RE</em>presentational <em>S</em>tate <em>T</em>ransfer of resources</h3>
+          </section>
+          <section>
+            <h2>what are we representing?</h2>
+            <br>
+            <p><em>resources</em> are
+              <ul>
+                <li class="fragment">things</li>
+                <li class="fragment">with names</li>
+                <li class="fragment">that often relate to other things</li>
+                <li class="fragment">on the Internet</li>
+              </ul></p>
+              <br>
+              <p class="fragment roll-in"><em>represented</em> using some <em>format</em><br>
+                (like JSON, XML, HTML, ...)</p>
+              </section>
+              <section>
+                <h2>Transfer</h2>
+                <ul>
+                  <li><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code></li>
+                  <li>CRUD operations backed by a DB</li>
+                  <li><em>Stateless</em> = all the necessary information is in the request</li>
+                </ul>
+              </section>
+              <section>
+                <h2>CRUD operations</h2>
+                <table style="margin:auto">
+                  <thead style="font-weight: bold">
+                    <tr><th>action</th><th>method</th><th>URI</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>index</td><td><code>GET</code></td><td>/books</td></tr>
+                    <tr><td>create</td><td><code>POST</code></td><td>/books</td></tr>
+                    <tr><td>read</td><td><code>GET</code></td><td>/books/1</td></tr>
+                    <tr><td>update</td><td><code>PUT</code></td><td>/books/1</td></tr>
+                    <tr><td>delete</td><td><code>DELETE</code></td><td>/books/1</td></tr>
+                  </tbody>
+                </table>
+                <br>
+                <p>resources are <em>exposed</em></p>
+              </section>
+            </section>
+            <section>
+              <section>
+                <h1>one more thing</h1>
+              </section>
+              <section>
+                <h1>gems</h1>
+                <p>software packages that include software or libraries that can be used by your RoR applications to add functionalities and behavior</p>
+                <div class="fragment roll-in"><p><strong>some examples?</strong></p>
+                  <pre><code class="bash">
+                    gem install prawn # if I want to generate pdfs
+                    gem install qrcode-rails3 # if I want to generate QR codes
+                  </code></pre></div>
+                  <p class="fragment roll-in">if you need something, there's probably a gem for that</p>
+                </section>
+              </section>
+              <section>
+                <h1>tools</h1>
+                <p>what we use to write code</p>
+                <ul>
+                  <li class="fragment roll-in">command line and <code>ruby</code> shell</li>
+                  <li class="fragment roll-in">text editor (Sublime Text 2 or Atom)</li>
+                  <li class="fragment roll-in">browser (Chrome, Firefox, Safari)</li>
+                  <li class="fragment roll-in"><code>git</code> for <em>versioning</em></li>
+                  <li class="fragment roll-in"><strong>NO IDE</strong></li>
+                </ul>
+              </section>
+              <section>
+                <h2>community and resources</h2>
+                <p>Rails has a great and active community</p>
+                <ul>
+                  <li><a href="http://rubygems.org">Tons of gems</a></li>
+                  <li>Tons of <a href="http://guides.rubyonrails.org/">tutorials</a> and screencasts (<a href="http://railsforzombies.org/">with</a> or <a href="http://www.railscasts.com/">without zombies</a>)</li>
+                  <li>Blogs (and the <a href="http://weblog.rubyonrails.org/">official one</a>)</li>
+                  <li>...and <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails">Stackoverflow</a></li>
+                </ul>
+              </section>
+              <section>
+                <h2>References</h2>
+                <ul>
+                  <li><a href="http://marklunds.com/s5/rails101">Rails 101</a> by Peter Marklund</li>
+                  <li><a href="http://http://ruby.railstutorial.org/">http://ruby.railstutorial.org/</a></li>
+                  <li><a href="http://http://nodo.github.io/presentations/rails_crash_course.html">Ruby on Rails Crash Course</a> by Andrea Nodari</li>
+                </ul>
+              </section>
+            </div>
+
+          </div>
+
+          <script src="lib/js/head.min.js"></script>
+          <script src="js/reveal.min.js"></script>
+
+          <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
+
+</script>
+
+</body>
+</html>
