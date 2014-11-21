@@ -15,5 +15,5 @@ In this workshop you will find yourself writing some amazing `ruby` code, so you
 These workshops are supported by a Marie Curie International Research Staff Exchange Scheme Fellowship within the 7th European Community Framework Programme.
 
 <div style="text-align: center">
-  <img src="images/fp7-mc-funding.jpg" height="100" />
+  <img src="images/fp7-mc-funding.jpg" height="50" />
 </div>
