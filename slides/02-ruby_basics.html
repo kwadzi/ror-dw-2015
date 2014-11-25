@@ -243,32 +243,73 @@ irb(main):017:0> [12, 78, 27].sort
 						<strong>this is a convention too!</strong>
 					</section>
 				</section>
+				
+				<!-- symbols -->
+				<section>
+					<h1><code>:symbols</code></h1>
+					When you place a colon in front of a simple word, you get a <em>symbol</em>. Symbols are cheaper than strings (in terms of computer memory.) If you use a word over and over in your program, use a symbol. Rather than having thousands of copies of that word in memory, the computer will store the symbol only once.
+				</section>
 
 				<!-- Hash 1 -->
 				<section>
 					<section>
 						<h1>hash</h1>
+						<h3>namely a list of <code>key-value</code> pairs</h3>
 						a.k.a. dictionary, <code>HashTable</code>, <code>HashMap</code>, ...
-						<p>a new hash of our favourite South African and Italian food</p>
-						<pre><code>
->> food = {}
-=> {}
-						</code></pre>
-						a hash is a set of <code>key => value</code> pairs, <em>unordered</em>
-						<pre><code>
->> food["Italian Pizza"] = :very_good
-=> :very_good
->> food
-=> {"Italian Pizza"=>:very_good}
+					</section>
+					<section>
+						<h2>Java <code>HashTable</code></h2>
+						<pre><code class="java">
+// create the HT
+Hashtable&lt;String, Integer&gt; numbers = new Hashtable&lt;String, Integer&gt;();
+
+// fill the HT
+numbers.put("one", 1);
+numbers.put("two", 2);
+numbers.put("three", 3);
+
+// access the HT
+Integer n = numbers.get("two");
+if (n != null) {
+ System.out.println("two = " + n);
+}
 						</code></pre>
 					</section>
 					<section>
-						<h2>what's that <code>:</code>?</h2>
-						When you place a colon in front of a simple word, you get a <em>symbol</em>. Symbols are cheaper than strings (in terms of computer memory.) If you use a word over and over in your program, use a symbol. Rather than having thousands of copies of that word in memory, the computer will store the symbol only once.
+						<h2>ruby <code>hash</code></h2>
+						<pre><code class="ruby">
+# create the hash
+>> numbers = {}
+
+# fill the hash
+>> numbers["one"] = 1
+>> numbers["two"] = 2
+
+# access the hash
+>> numbers["two"]
+=> 2
+>> numbers["fortytwo"]
+=> nil
+						</code></pre>
 					</section>
 				</section>
 
 				<!-- Hash 2 -->
+				<section>
+					<h2>play with hashes</h2>
+					<p>a new hash of our favourite South African and Italian food</p>
+					<pre><code>
+>> food = {}
+=> {}
+					</code></pre>
+					a hash is a set of <code>key => value</code> pairs, <em>unordered</em>
+					<pre><code>
+>> food["Italian Pizza"] = :very_good
+=> :very_good
+>> food
+=> {"Italian Pizza"=>:very_good}
+					</code></pre>
+				</section>
 				<section>
 					<h2>let's add a few</h2>
 					<pre><code>
@@ -305,7 +346,6 @@ irb(main):017:0> [12, 78, 27].sort
 						<p class="fragment">and fill it with our ratings of food</p>
 						<div class="fragment roll-in"><pre><code>
 >> food.values.each { |rate| ratings[rate] += 1 }
-=> [:very_good, :not_so_good, :very_good, :dont_know, :good, :excellent]
 						</code></pre></div>
 						<p class="fragment">here it is</p>
 						<div class="fragment roll-in"><pre><code>
@@ -339,7 +379,6 @@ irb(main):017:0> [12, 78, 27].sort
 >> food.values.each do |rate|
 ?> 	ratings[rate] += 1
 >> end
-=> [:very_good, :not_so_good, :very_good, :dont_know, :good, :excellent]
 >> ratings
 => {:very_good=>2, :not_so_good=>1, :dont_know=>1, :good=>1, :excellent=>1}
 						</code></pre>
