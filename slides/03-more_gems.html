@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>More Gems for our app</title>
+
+    <meta name="description" content="More stuff for our app">
+    <meta name="author" content="ICT4g">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>More gems</h1>
+          <h2>for our app</h2>
+          <code>#rorec14 #THIS_PLACE</code>
+        </section>
+        <section>
+          <h1>booty of gems</h1>
+          <h3>
+            If you want to do something,<br> there is probably a gem for that.
+          </h3>
+          <ul>
+            <li>How to find gems? <span class="fragment">Use Google, Stackoverflow, etc.</span></li>
+            <li>How to choose among gems that do the same thing?
+              <span class="fragment">Use <a href="https://www.ruby-toolbox.com">Ruby Toolbox</a></span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h1>Front End</h1>
+          </section>
+
+          <!-- fontawesome -->
+          <section>
+            <h2><code>fontawesome</code></h2>
+            <p>
+              awesome vector icons for our application
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'font-awesome-sass'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="ruby">
+  <%= icon 'edit', 'Edit' %>
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- Gmaps4Rails -->
+          <section>
+            <h2><code>Gmaps4Rails</code></h2>
+            <p>
+              integrate GoogleMaps in our app
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'gmaps4rails'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="ruby">
+  @users = User.all
+  @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+    marker.lat user.latitude
+    marker.lng user.longitude
+  end
+              </code></pre>
+              <pre><code class="ruby">
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- Paperclip -->
+          <section>
+            <h2><code>Paperclip</code></h2>
+            <p>
+              attach files to our models
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'paperclip'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="ruby">
+  has_attached_file :avatar
+              </code></pre>
+              <pre><code class="erb">
+  <%= image_tag user.avatar.url %>
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- Gettext -->
+          <section>
+            <h2><code>Gettext</code></h2>
+            <p>
+              i18nalize our text strings
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'gettext_i18n_rails'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="erb">
+  <h1><%= _('New Product') %></h1>
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Back End</h1>
+          </section>
+
+          <!-- CanCanCan -->
+          <section>
+            <h2><code>CanCanCan</code></h2>
+            <p>
+              authorization made simple
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'cancancan'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="ruby">
+  if @producer.can? :edit, @product
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- Geocoder -->
+          <section>
+            <h2><code>Geocoder</code></h2>
+            <p>
+              addresses to LatLng and viceversa
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'geocoder'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="ruby">
+  geocoded_by :address
+              </code></pre>
+              <pre><code class="ruby">
+  Producer.near 'Grahamstown', 20
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- Delayed -->
+          <section>
+            <h2><code>Delayed Jobs</code></h2>
+            <p>
+              manage our async tasks
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  gem 'delayed_job_active_record'
+            </code></pre>
+            <p>
+              example
+              <pre><code class="ruby">
+  @user.delay.activate!
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- Capistrano -->
+          <section>
+            <h2><code>Capistrano</code></h2>
+            <p>
+              deploy on remote server (almost) painlessly
+            </p>
+            <pre><code class="bash">
+  # Command Line
+
+  >> gem install capistrano
+            </code></pre>
+            <p>
+              example
+              <pre><code class="bash">
+  >> cap deploy production
+              </code></pre>
+            </p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Debug</h1>
+          </section>
+
+          <!-- Mailcatcher -->
+          <section>
+            <h2><code>Mailcatcher</code></h2>
+            <p>
+              test email whitout spamming
+            </p>
+            <pre><code class="bash">
+  # Command Line
+
+  >> gem install mailcatcher
+            </code></pre>
+            <p>
+              example
+              <pre><code class="bash">
+  >> mailcatcher
+              </code></pre>
+            </p>
+          </section>
+
+          <!-- BetterErrors -->
+          <section>
+            <h2><code>BetterErrors</code></h2>
+            <p>
+              a powerful <code>rails console</code> in the error page
+            </p>
+            <pre><code class="ruby">
+  # Gemfile
+
+  group :development do 
+      gem 'better_errors'
+      gem 'binding_of_caller'
+  end
+            </code></pre>
+            <p>
+              example in the next slide
+            </p>
+          </section>
+          <section>
+            <img src="img/better-errors.png">
+          </section>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

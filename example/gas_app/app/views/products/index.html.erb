@@ -1,0 +1,26 @@
+<h1><%= @producer.name %>'s Products</h1>
+
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag product.photo.url(:medium) %>
+        <div class="caption">
+          <h3><%= link_to product.name, producer_product_path(@producer, product) %> <small><%= price_tag_for product %></small></h3>
+          <p><%= product.description %></p>
+          <p>
+            <%= render 'commands', product: product %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to 'New Product', new_producer_product_path(@producer), class: 'btn btn-lg btn-success' %>
+  </div>
+</div>

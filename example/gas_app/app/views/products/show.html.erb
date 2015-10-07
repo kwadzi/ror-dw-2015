@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @product.name %> <small><%= price_tag_for @product %></small></h1>
+
+<%= image_tag @product.photo.url(:medium) %>
+
+<p>
+  <%= @product.description %>
+</p>
+
+<p>
+  <%= render 'commands', product: @product %>
+</p>

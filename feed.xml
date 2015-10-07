@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RubyOnRails developers workshop</title>
+    <description>Some days of RubyOnRails development around the Eastern Cape. By the ICT4G FBK guys.
+</description>
+    <link>http://ict4g.github.io/ror-dw-2015/ror-dw-2015/</link>
+    <atom:link href="http://ict4g.github.io/ror-dw-2015/ror-dw-2015/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 07 Oct 2015 11:11:39 +0200</pubDate>
+    <lastBuildDate>Wed, 07 Oct 2015 11:11:39 +0200</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Fort Hare Part 1</title>
+        <description>&lt;p&gt;Great morning session today at Fort Hare University.&lt;/p&gt;
+
+&lt;p&gt;Thanks to the participants and see you next Monday!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/B2tSlnnCcAIovAM.jpg&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 18 Nov 2014 15:59:33 +0100</pubDate>
+        <link>http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/11/18/fort-hare-part-1.html</link>
+        <guid isPermaLink="true">http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/11/18/fort-hare-part-1.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Dates Confirmed!</title>
+        <description>&lt;p&gt;Great news guys! &lt;/p&gt;
+
+&lt;p&gt;Here are the dates for the workshops:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Nov. 18th&lt;/strong&gt; from &lt;strong&gt;09h00&lt;/strong&gt; to &lt;strong&gt;13h00&lt;/strong&gt; &lt;br /&gt;
+@ Computer Science Department, &lt;em&gt;Fort Hare University&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Nov. 21th&lt;/strong&gt; from &lt;strong&gt;09h00&lt;/strong&gt; to &lt;strong&gt;16h00&lt;/strong&gt; &lt;br /&gt;
+@ Eastern Cape Information Technology Initiative (ECITI), &lt;em&gt;eMonti Science &amp;amp; Technology Park, Zone 1C, East London IDZ, Sunnyridge, East London&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Nov. 24th&lt;/strong&gt; from &lt;strong&gt;09h00&lt;/strong&gt; to &lt;strong&gt;13h00&lt;/strong&gt; &lt;br /&gt;
+@ Computer Science Department, &lt;em&gt;Fort Hare University&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Nov. 27th&lt;/strong&gt; from &lt;strong&gt;09h00&lt;/strong&gt; to &lt;strong&gt;16h00&lt;/strong&gt; &lt;br /&gt;
+@ Media Centre SNII, &lt;em&gt;51 Newton Street, Landbank Building, Port Elizabeth&lt;/em&gt; &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/ror-dw-2015/where-and-when&quot;&gt;this page&lt;/a&gt; to get the latest updates about the exact locations in each place.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Nov 2014 14:21:19 +0100</pubDate>
+        <link>http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/11/13/dates-confirmed.html</link>
+        <guid isPermaLink="true">http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/11/13/dates-confirmed.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>A Short Survey for the Participants</title>
+        <description>&lt;p&gt;Hello dear Participant!&lt;/p&gt;
+
+&lt;p&gt;We kindly ask you to fill this short survey before attending the RoR workshop.
+We will use the information you will provide us to better understand the average technical level of the class.&lt;/p&gt;
+
+&lt;p&gt;We won’t sell this information to NSA, CIA or FaceBook. Only Google will know about it :-)&lt;/p&gt;
+
+&lt;iframe src=&quot;https://docs.google.com/forms/d/1zPMH4DcRkJEP5tCER8PHll9jmBWl2yIBP876VVWtyww/viewform?embedded=true&quot; width=&quot;760&quot; height=&quot;1941&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot;&gt;Loading...&lt;/iframe&gt;
+</description>
+        <pubDate>Wed, 05 Nov 2014 15:18:17 +0100</pubDate>
+        <link>http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/11/05/a-short-survey-for-the-participants.html</link>
+        <guid isPermaLink="true">http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/11/05/a-short-survey-for-the-participants.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Website Up and Running</title>
+        <description>&lt;p&gt;Today we launched this website for the participants to the &lt;strong&gt;RubyOnRails developers workshop&lt;/strong&gt; we will carry out in November around the Eastern Cape in South Africa.&lt;/p&gt;
+
+&lt;p&gt;Please subscribe to the &lt;a href=&quot;/ror-dw-2015/feed.xml&quot;&gt;RSS feed&lt;/a&gt; and don’t miss our updates!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Oct 2014 22:19:06 +0200</pubDate>
+        <link>http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/10/09/website-up-and-running.html</link>
+        <guid isPermaLink="true">http://ict4g.github.io/ror-dw-2015/ror-dw-2015/2014/10/09/website-up-and-running.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
