@@ -1,8 +1,8 @@
 # Site settings
-title: RubyOnRails developers workshop
+title: Ruby on Rails development workshop
 email: info@ict4g.org
 description: > # this means to ignore newlines until "baseurl:"
-  Some days of RubyOnRails development around the Eastern Cape.
+  Some days of web development with Ruby on Rails in East London and Alice.
   By the ICT4G FBK guys.
 baseurl: "/ror-dw-2015" # the subpath of your site, e.g. /blog/
 url: "http://ict4g.github.io/ror-dw-2015" # the base hostname & protocol for your site
