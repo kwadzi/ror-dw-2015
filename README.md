@@ -23,5 +23,6 @@ When you deploy for the first time, please be sure to [setup correctly](https://
 
 Before deploying be sure you have a **local** branch `gh-pages` in your repo. 
 
-Finally, **DEPLOY** with `octopress deploy`. This will automatically push the content of `_site/` in the `gh-pages` branch.  <br>
+Finally, **DEPLOY** with `octopress deploy`. This will automatically push the content of `_site/` in the `gh-pages` branch.
+
 **Don't do this manually**.
