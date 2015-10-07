@@ -1,9 +1,9 @@
-ror-ec-2014
+ror-dw-2015
 ===========
 
 Ruby on Rails crash course around the Eastern Cape
 
-This website is available at [http://ict4g.github.io/ror-ec-2014](http://ict4g.github.io/ror-ec-2014/)
+This website is available at [http://ict4g.github.io/ror-dw-2015](http://ict4g.github.io/ror-dw-2015/)
 
 ## About Previewing and Deploying
 
@@ -13,7 +13,7 @@ For this reason, the `master` branch contains all the working files, and the `gh
 
 ### Preview
 
-When you modify the website you **MUST** work in the `master` branch and preview what your are doing by executing `octopress serve --watch` and by visiting [http://localhost:4000/ror-ec-2014/](http://localhost:4000/ror-ec-2014/).
+When you modify the website you **MUST** work in the `master` branch and preview what your are doing by executing `jekyll serve --watch` and by visiting [http://localhost:4000/ror-dw-2015/](http://localhost:4000/ror-dw-2015/).
 
 Once you have finished just `git commit` and `git push`.
 

@@ -11,7 +11,7 @@ icon: <i class="fa fa-info-circle"></i>
 
 # Sibukele "Spooky" Gumbo
 
-[<img class="ict4g-member" src="https://media.licdn.com/media/p/2/000/129/163/3cadf18.jpg">](http://za.linkedin.com/pub/sibukele-spooky-gumbo/34/3a0/825)
+[<img class="ict4g-member" src="https://media.licdn.com/media/p/4/005/0ab/2bb/1912200.jpg">](http://za.linkedin.com/pub/sibukele-spooky-gumbo/34/3a0/825)
 
 Project Lead - [Siyakhula Living Lab](http://siyakhulall.org) Management Unit at Rhodes University/University of Fort Hare/Dwesa community
 

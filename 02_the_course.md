@@ -17,11 +17,11 @@ Here you can find the outline of the *{{site.title}}*.
 * Work with gems
 * ...
 
-Here are the slides
+<!-- Here are the slides -->
 
-* [Introduction]({{ "/slides/00-intro_to_rorec14.html" | prepend: site.baseurl }})
+<!-- * [Introduction]({{ "/slides/00-intro_to_rorec14.html" | prepend: site.baseurl }})
 * [Web apps ad RubyOnRails]({{ "/slides/01-intro_to_webapps_and_rails.html" | prepend: site.baseurl }})
 * [Ruby basics]({{ "/slides/02-ruby_basics.html" | prepend: site.baseurl }})
 * [More gems]({{ "/slides/03-more_gems.html" | prepend: site.baseurl }})
 
-The example app will be undisclosed soon...
+The example app will be undisclosed soon... -->

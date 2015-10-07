@@ -30,28 +30,17 @@ For this course we expect you to have a fully operational RoR environment on you
 
 ## Technical Requirements
 
-If you work on a __ Mac__, please visit [this page](https://gorails.com/setup/osx/10.9-mavericks) and carefully follow the steps. You can skip the MySql and PostGreSQL sections.
+### If you work on a __ Mac__
 
-If you work on <i class="fa fa-linux"></i> __Ubuntu__ (or another Linux Distro), please visit [this page](https://gorails.com/setup/ubuntu/14.04) and carefully follow the steps. Choose `rbenv` to install Ruby and skip the MySql and PostGreSQL sections.
+please visit [this page](https://gorails.com/setup/osx/10.11-el-capitan) and carefully follow the steps. You can skip the MySql and PostGreSQL sections.
 
-Finally, if you work on <i class="fa fa-windows"></i> __MS Windows™__, you have two options:
+### If you work on <i class="fa fa-linux"></i> __Ubuntu__
 
-* install [Ubuntu 14.04.1 LTS](http://www.ubuntu.com/download/desktop/contribute/?version=14.04.1&architecture=amd64) on another partition and follow the instructions above.
-* install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and follow the instructions below.
+Please visit [this page](https://gorails.com/setup/ubuntu/14.04) and carefully follow the steps. Choose `rbenv` to install Ruby and skip the MySql and PostGreSQL sections.
 
-## Using Ubuntu on a VirtualBox on MS Windows™ on your PC
+### If you work on <i class="fa fa-windows"></i> __MS Windows™__
 
-After having installed [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and the Extenstion Pack, download [this Ubuntu 14.04.1 LTS Virtual Machine][vm_download] (approx 2.1GB) we created specifically for the workshop.
+You have two options:
 
-Once the download is finished double click on the file, select "_Reinitialize the MAC address for all the cards_" and it will automatically add a VM called "_RoR-SA-14.04.1_" to your VirtualBox. 
-
-Start the virtual machine and login with the following credentials (if asked):
-
-* username: `ror-student`
-* password: `rubyonrails`
-
-Once you are in, open a Terminal (Ctrl+Alt+T) and [setup your Github account](https://gorails.com/setup/ubuntu/14.04#git).
-
-Now you have a fully operational RoR environment on your computer! Cool.
-
-[vm_download]: http://ict4g.org/ror-ec-2014-files/RoR-SA-14.04.1.ova
+* install [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/) on another partition and follow the instructions above.
+* install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/) as a Virtual Machine. After the installations follow the steps as if you work on a <i class="fa fa-linux"></i> __Ubuntu__
