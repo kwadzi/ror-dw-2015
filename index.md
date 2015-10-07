@@ -6,7 +6,7 @@ layout: default
 
 Hello!
 
- In this website you will find all the relevant information about the [*{{site.title}}*](course) that will be held in [East London and Fort Hare University in October 2015](where-and-when).
+In this website you will find all the relevant information about the [*{{site.title}}*](course) that will be held in [East London and Fort Hare University in October 2015](where-and-when).
 
 In this workshop you will find yourself writing some amazing `ruby` code, so you will need to bring [your own laptop](prereq)!
 
