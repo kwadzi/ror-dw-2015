@@ -21,5 +21,7 @@ Once you have finished just `git commit` and `git push`.
 
 When you deploy for the first time, please be sure to [setup correctly](https://github.com/octopress/deploy) your deployment configuration files (basically you must have a properly configured `_deploy.yml` file). 
 
+Before deploying be sure you have a **local** branch `gh-pages` in your repo. 
+
 Finally, **DEPLOY** with `octopress deploy`. This will automatically push the content of `_site/` in the `gh-pages` branch.  <br>
 **Don't do this manually**.
