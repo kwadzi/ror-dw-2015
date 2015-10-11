@@ -4,7 +4,7 @@ title: Preparatory exercise
 date: 2015-10-10T11:48:22+02:00
 ---
 
-The workshops are fast approaching. In order to be able to follow, please ready your environment as described [here](prereq).
+The workshops are fast approaching. In order to be able to follow, please ready your environment as described [here]({{ "/prereq" | prepend: site.baseurl }}).
 
 Once you are done, complete the **compulsory exercise** here and fill the short questionnaire you find at the end of this post. This is to make sure that your system is working. Remember that we cannot assist you in setting up your system.
 
