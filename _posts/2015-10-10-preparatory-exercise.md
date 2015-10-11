@@ -15,7 +15,7 @@ If you set up your system properly you should be able to run the commands below.
 ~~~
 rails new pineapple_farm
 cd pineapple_farm
-rails g scaffold Pineapple category weight:double
+rails g scaffold Pineapple category weight:float
 rake db:migrate
 rails c
 ~~~
