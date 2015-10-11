@@ -10,6 +10,8 @@ In this website you will find all the relevant information about the [*{{site.ti
 
 In this workshop you will find yourself writing some amazing `ruby` code, so you will need to bring [your own laptop](prereq)!
 
+--
+
 [The workshops](about) are organized by the [ICT4G group](http://ict4g.org) in the context of *[The App Factory](http://ict4g.org/home/projects)* project supported by the *Italian Ministry of Foreign Affairs*.
 
 <div style="text-align: center">

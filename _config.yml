@@ -11,3 +11,7 @@ github_username:  ict4g
 
 # Build settings
 markdown: kramdown
+kramdown:
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: nil
