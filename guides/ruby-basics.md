@@ -395,3 +395,199 @@ all other Ruby objects are true, even 0
 # Loops
 
 Things like `for` and `while`. The exist in Ruby but we like the others!
+
+## The `each` method
+
+Executes the *block code* on all the elements of `self`
+
+~~~ruby
+>> (1..5).each do |element|
+?> 	print element * 10, " "
+>> end
+10 20 30 40 50                  
+~~~
+
+## The `map` method
+
+Invokes the given *block code* once for each element of `self` and creates a new array containing the values returned by the block
+
+~~~ruby
+>> (1..5).map do |element|
+?>   element * 2
+>> end
+=> [2, 4, 6, 8, 10]
+~~~
+
+## The `select` method
+
+It is like `map` but returns only the elements that match the condition
+
+~~~ruby
+>> (1..5).select do |element|
+?>   element.even?
+>> end
+=> [2, 4]
+~~~
+
+# Method definition
+
+Open the definition with `def` and close it with `end`
+
+~~~ruby
+>> def palindrome?(string)
+>>  string == string.reverse
+>> end
+~~~
+
+and call it by name
+
+~~~ruby
+>> palindrome? "level"
+=> true
+~~~
+
+in Ruby functions have an implicit *return*, meaning they *return* the last statement evaluated, but dont'worry, the `return` statement exists too.
+
+# Classes
+
+We define a new class like this
+
+~~~ruby
+>> class Word
+>> 	def palindrome?(string)
+>> 		string == string.reverse
+>> 	end
+>> end
+~~~
+
+and we use it like this
+
+~~~ruby
+>> w = Word.new
+=> #<Word:0x007fb8759a97e8>
+>> w.palindrome? "level"
+=> true
+~~~
+
+But... it’s odd to create a new class just to create a method that takes a string as an argument, so let's *extend* the Ruby class `String`.
+
+## Extending a Class
+
+We can define `Word` as a subclass of `String`
+
+~~~ruby
+>> class Word < String
+>> 	def palindrome?
+>> 		self == self.reverse
+>> 	end
+>> end
+~~~
+
+`self` is similar to `this` in Java
+
+and now we use it like this
+
+~~~ruby
+>> w = Word.new("level")
+=> "level"
+>> w.palindrome?
+=> true
+~~~
+
+we obviously inherited all the methods of String
+
+~~~ruby
+>> w.length
+=> 5
+~~~
+
+and we can see the inheritance of our new class
+
+~~~ruby
+>> w.class.superclass
+=> String
+>> w.class.superclass.superclass
+=> Object
+>> w.class.superclass.superclass.superclass
+=> BasicObject
+~~~
+
+## Opening a Class
+
+This is something cool of Ruby!
+
+We don't need to extend String to add new methods to it
+~~~ruby
+>> class String
+>>   def palindrome?
+>>     self == self.reverse
+>>   end
+>> end
+
+~~~
+
+and now ladies and gentlemen...
+
+~~~ruby
+>> "level".class
+=> String
+>> "level".palindrome?
+=> true
+~~~
+
+this is called *opening a built-in class* and you should do it only if you have a **REALLY** good reason.
+
+## Local vs. Instance vs. Class Variables
+
+`x = 3` is a local variable for a method or block (gone when the method is done)
+
+`@x = 3` is a instance variable owned by each object (it sticks around)
+
+`@@x = 3` is a class variable shared by all objects (it sticks around, too).
+
+## Instance vs. Class Methods
+
+Instance methods are defined like this
+
+~~~ruby
+>> class Word < String
+>> 	def palindrome?
+>> 		self == self.reverse
+>> 	end
+>> end
+~~~
+
+and Class methods are defined like this
+
+~~~ruby
+>> class Word < String
+>> 	def self.palindrome?(s)
+>> 		s == s.reverse
+>> 	end
+>> end
+~~~
+
+and you will usit like this
+
+~~~ruby
+>> Word.palindrome? "aibohphobia"
+=> true
+~~~
+
+# Other useful things of Ruby
+
+Ruby has a number of other features that can be really useful, especially when working in Rails
+
+## String interpolation
+
+String interpolation in ruby allows you to embed (the string representation of) a variable in a string
+
+~~~ruby
+>> a = 15;
+?> "I have #{a} cats"
+=> "I have 15 cats"
+>> array = [15, 7, 4, 'braai'];
+?>   "this is an array: #{array}"
+=> "this is an array: [15, 7, 4, \"braai\"]"
+>> "The time now is #{Time.now}"
+~~~
