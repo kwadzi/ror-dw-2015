@@ -567,7 +567,7 @@ and Class methods are defined like this
 >> end
 ~~~
 
-and you will usit like this
+and you will use it like this
 
 ~~~ruby
 >> Word.palindrome? "aibohphobia"
@@ -591,3 +591,45 @@ String interpolation in ruby allows you to embed (the string representation of) 
 => "this is an array: [15, 7, 4, \"braai\"]"
 >> "The time now is #{Time.now}"
 ~~~
+
+## Ruby Gems
+
+Gems are software packages that include software or libraries that can be used in your Ruby code to add functionalities and behaviors
+
+Rails itself is a Ruby Gem, and you should have it installed already
+
+~~~bash
+gem list | grep rails
+rails -v
+~~~
+
+## Ruby Assignments
+
+Ruby has the `||` operator which is a bit funky. When put in a chain
+
+~~~ruby
+x = a || b || c || "default"
+~~~
+
+it means “test each value and return the first that’s not false.” So if `a` is false, it tries `b`. If `b` is false, it tries `c`. Otherwise, it returns the string `"default"`.
+
+If you write
+
+~~~ruby
+x = x || "default"
+~~~
+
+it means “set `x` to itself (if it has a value), otherwise use the `"default"`.” An easier way to write this is
+
+~~~ruby
+x ||= "default"
+~~~
+
+which means the same: set x to the default value unless it has some other value. You’ll see this a lot in Ruby code.
+
+## Syntax: parenthesis and semicolons
+
+* Parenthesis on method calls are optional; use `print "hi"`.
+* Semicolons aren't needed after each line.
+* Use “if do else end” rather than braces.
+* Parens aren't needed around the conditions in if-then statements.
