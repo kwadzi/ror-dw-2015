@@ -21,7 +21,7 @@ Type `irb --prompt` simple for a shorter prompt
 When you learn a new language you always write the same Hello World program
 
 ~~~ruby
-puts "Hello World!" # done!
+>> puts "Hello World!" # done!
 ~~~
 
 # Numbers
@@ -46,7 +46,7 @@ Ruby recognizes numbers and mathematic symbols.
 To make a `String` just enclose the text in quotes
 
 ~~~ruby
-irb(main):002:0> "Grahamstown"
+>> "Grahamstown"
 => "Grahamstown"
 ~~~
 
@@ -55,28 +55,28 @@ irb(main):002:0> "Grahamstown"
 let's try to reverse it
 
 ~~~ruby
-irb(main):003:0> "Grahamstown".reverse
+>> "Grahamstown".reverse
 => "nwotsmaharG"
 ~~~
 
 how long is Grahamstown?
 
 ~~~ruby
-irb(main):004:0> "Grahamstown".length
+>> "Grahamstown".length
 => 11
 ~~~
 
 let's repeat it
 
 ~~~ruby
-irb(main):005:0> "Grahamstown" * 5
+>> "Grahamstown" * 5
 => "GrahamstownGrahamstownGrahamstownGrahamstownGrahamstown"
 ~~~
 
 or SHOUT it out loud
 
 ~~~ruby
-irb(main):006:0> "Grahamstown".upcase
+>> "Grahamstown".upcase
 => "GRAHAMSTOWN"
 ~~~
 
@@ -87,7 +87,7 @@ irb(main):006:0> "Grahamstown".upcase
 The correct term is actually *messages*
 
 ~~~ruby
-irb(main):001:0> 4.send(:+, 3)
+>> 4.send(:+, 3)
 => 7
 ~~~
 
@@ -96,7 +96,7 @@ here we send the message `:+` with parameter 3 to the object 4
 ## Wrong methods
 
 ~~~ruby
-irb(main):006:0> 42.reverse
+>> 42.reverse
 NoMethodError: undefined method 'reverse' for 42:Fixnum
 ~~~
 
@@ -104,14 +104,14 @@ Ruby is telling us there is no method reverse for numbers.
 but we can do something like this
 
 ~~~ruby
-irb(main):007:0> 42.to_s.reverse
+>> 42.to_s.reverse
 => "24"
 ~~~
 
 or this
 
 ~~~ruby
-irb(main):008:0> 42.to_s.reverse.to_i
+>> 42.to_s.reverse.to_i
 => 24
 ~~~
 
@@ -121,7 +121,7 @@ What are arrays?! They are **lists**.
 Type in a pair of brackets: `[]`
 
 ~~~ruby
-irb(main):010:0> [12, 78, 27]
+>> [12, 78, 27]
 => [12, 78, 27]
 ~~~
 
@@ -130,13 +130,13 @@ Lists store elements in the order they are inserted.
 ## Have fun with arrays
 
 ~~~ruby
-irb(main):011:0> [12, 78, 27].max
+>> [12, 78, 27].max
 => 78
-irb(main):015:0> [12, 78, 27].last
+>> [12, 78, 27].last
 => 27
-irb(main):016:0> [12, 78, 27].reverse
+>> [12, 78, 27].reverse
 => [27, 78, 12]
-irb(main):017:0> [12, 78, 27].sort
+>> [12, 78, 27].sort
 => [12, 27, 78]
 ~~~
 
