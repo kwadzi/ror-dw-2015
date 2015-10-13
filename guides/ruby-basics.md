@@ -10,7 +10,7 @@ irb(main):001:0>
 
 `irb` is the *Interactive Ruby Shell*.
 
-Type `irb --prompt` simple for a shorter prompt
+Type `irb --prompt simple` for a shorter prompt
 
 ~~~ruby
 >>
@@ -394,7 +394,7 @@ all other Ruby objects are true, even 0
 
 # Loops
 
-Things like `for` and `while`. The exist in Ruby but we like the others!
+Things like `for` and `while`. They exist in Ruby but we like the others!
 
 ## The `each` method
 
