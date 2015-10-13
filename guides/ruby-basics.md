@@ -212,7 +212,7 @@ Namely a list of `key-value` pairs.
 
 a.k.a. `Dictionary`, `HashTable`, `HashMap`, ...
 
-### Java `HashTable`
+## Java `HashTable`
 
 ~~~java
 // create the HT
@@ -230,7 +230,7 @@ if (n != null) {
 }
 ~~~
 
-### Ruby `Hash`
+## Ruby `Hash`
 
 ~~~ruby
 # create the hash
