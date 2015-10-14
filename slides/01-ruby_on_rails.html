@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Ruby on Rails</title>
+
+  <meta name="description" content="Ruby on Rails">
+  <meta name="author" content="ICT4g">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Ruby on Rails</h1>
+          <h3 class="fragment roll-in">or simply <em>Rails</em></h3>
+        </section>
+        <section>
+          <h1>who uses Rails</h1>
+          <ul>
+            <li>Twitter</li>
+            <li>Github</li>
+            <li>AirBnb</li>
+            <li>Runtastic</li>
+            <li>Slideshare</li>
+            <li>Soundcloud</li>
+            <li>&hellip;</li>
+          </ul>
+        </section>
+        <section>
+          <h1><strong>Ruby</strong> <small>programming language</small></h1>
+          <h1><strong>Rails</strong> <small>framework for building web applications</small></h1>
+        </section>
+        <section>
+          <section>
+            <h2>Web Applications</h2>
+            <div class="fragment">
+              <blockquote>
+                A web application or web app is a client-server software application in which the client (or user interface) runs in a web browser.
+              </blockquote>
+              <p style="text-align:right"><small>-Wikipedia</small></p>
+            </div>
+          </section>
+          <section>
+            <h2>client side</h2>
+            <h3>static content</h3>
+            <p>HTML, CSS and images</p><br>
+            <h3>dynamic content</h3>
+            <p>client-side scripts (e.g., JS)</p>
+            <div class="fragment roll-in">
+              <p>flash content (if you live in 2004)</p>
+              <p>Java applets (if you live in the '90s)</p>
+            </div>
+          </section>
+          <section>
+            <h2>server side</h2>
+            <p>server side code to dynamically generate HTML</p>
+            <p>(PHP, Java, Ruby, ..)</p><br>
+            <p>a <em>Framework</em> (Zend, Django, JSF, Rails...)</p>
+            <p>or a <em>CMS</em> (Drupal, WordPress, Joomla, ...) which is a web application by itself</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Ruby on Rails</h2>
+            <p>is a <strong>framework</strong> for <em>building</em> web applications</p>
+            <ul>
+              <li>Open Source (<a href="http://github.com/rails/rails" target="_blank">Source code</a>)</li>
+              <li>Released: 2003</li>
+              <li>Full stack web framework written in Ruby</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>full stack... what?</h2>
+            <p>
+              <u>it abstracts and manages all parts of a web application:</u>
+            </p>
+            <ul>
+              <li>the database (model)</li>
+              <li>HTML/visualization (view)</li>
+              <li>request flow (controller)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Model<span style="color: lightgrey;">VC</span></h2>
+            <p>
+              Models are classes that talk to the databse. <br>
+              You find, create and save models, so you don’t (usually) have to write SQL.
+              Rails has a class to handle the magic of saving to a database when a model is updated.
+            </p>
+            <p>A Rails model</p>
+            <ul>
+              <li>maps a table in the database with a ruby object</li>
+              <li>validates your data before saving them</li>
+              <li>has the code manipulate your data</li>
+              <li>manages the associations with other models</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2><span style="color: lightgrey;">MV</span>Controller</h2>
+            <p>
+              Controllers take user input (like a URL) and decide what to do (show a page, order an item, post a comment). <br>
+              They may have business logic, like finding the right models or changing data.
+              Ideally, controllers just take inputs, call model methods, and pass outputs to the view (including error messages).
+            </p>
+            <p>A Rails controller</p>
+            <ul>
+              <li>has methods that correspond to the app's functions</li>
+              <li>controls the flow of the request</li>
+              <li>exposes your data to views</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2><span style="color: lightgrey;">M</span>View<span style="color: lightgrey;">C</span></h2>
+            <p>Views display the output to the user (typically in HTML)</p>
+            <p>A Rails view</p>
+            <ul>
+              <li>uses ERB to put Ruby code in HTML</li>
+              <li>can output data XML (for web services/RSS feeds) or JSON (for AJAX calls)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>MVC</h2>
+            <img src="img/mvc_diagram.png">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>convention over configuration</h2>
+            Rails uses standard names and a standard directory structure for every webapp
+            <pre class="fragment roll-in"><code class="bash">
+              app
+              |-- assets
+              |-- controllers
+              |-- helpers
+              |-- mailers
+              |-- models
+              `-- views
+            </code></pre>
+          </section>
+          <section>
+            <h2>for example</h2>
+            <p>if we have a model called <code>Book</code>, Rails will assume the following directory structure</p>
+            <pre><code class="bash">
+              app
+              |-- controllers
+              |   `-- books_controller.rb
+              |-- models
+              |   `-- book.rb
+              `-- views
+                  `-- books
+                      |-- index.html.erb
+                      |-- new.html.erb
+                      |-- edit.html.erb
+                      `-- ...
+            </code></pre>
+            <p class="fragment">and it will know that there is a table called <code>books</code> in the DB</p>
+          </section>
+          <section>
+            <h2>views are rendered automatically</h2>
+            in our example, <code>books_controller</code> will automatically render views if they are named correctly
+            <pre><code class="ruby">
+              class BooksController &lt; ActiveController
+                def index
+                  # renders app/views/books/index.html.erb
+                  # write code here to customize behavior
+                end
+
+                def new
+                  # renders app/views/books/new.html.erb
+                  # write code here to customize behavior
+                end
+              end
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h1>tools</h1>
+          <p>what we use to write code</p>
+          <ul>
+            <li class="fragment roll-in">command line and <code>ruby</code> shell</li>
+            <li class="fragment roll-in">text editor (Atom)</li>
+            <li class="fragment roll-in">browser (Chrome, Firefox, Safari)</li>
+            <li class="fragment roll-in"><code>git</code> for <em>versioning</em></li>
+            <li class="fragment roll-in"><strong>NO IDE</strong></li>
+          </ul>
+        </section>
+        <section>
+          <h2>community and resources</h2>
+          <p>Rails has a great and active community</p>
+          <ul>
+            <li><a href="http://rubygems.org">Tons of gems</a></li>
+            <li>Tons of <a href="http://guides.rubyonrails.org/">tutorials</a> and screencasts (<a href="http://railsforzombies.org/">with</a> or <a href="http://www.railscasts.com/">without zombies</a>)</li>
+            <li>Blogs (and the <a href="http://weblog.rubyonrails.org/">official one</a>)</li>
+            <li>...and <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails">Stackoverflow</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>References</h2>
+          <ul>
+            <li><a href="http://http://ruby.railstutorial.org/">http://ruby.railstutorial.org/</a></li>
+            <li><a href="http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/">Starting Ruby on Rails: What I Wish I Knew</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+
+          <script src="lib/js/head.min.js"></script>
+          <script src="js/reveal.min.js"></script>
+
+          <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
+
+</script>
+
+</body>
+</html>
