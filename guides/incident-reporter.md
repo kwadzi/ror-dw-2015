@@ -60,7 +60,7 @@ This will compile Twitter Bootstrap into the CSS of our app.
 @import "bootstrap";
 ```
 
-This will include jQuery and Bootrap into our JS.
+This will include jQuery and Bootstrap into our JS.
 
 #### `application.js`
 
@@ -260,6 +260,8 @@ If you enter the console now you should see that the categories are in the db bu
 # app/views/incidents/_form.html.erb
 <%= f.select :category_id, options_from_collection_for_select(@categories, :id, :name), {}, {class: 'form-control'} %>
 ```
+
+Check the generateted HTML to understand the line above.
 
 But we get an error! Why? (solution below)
 
