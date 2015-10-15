@@ -685,7 +685,7 @@ if (navigator.geolocation) {
 </script>
 ```
 
-Notice that it takes a while to get our position. We can disable the two fields to prevent the user from touching them. Just add `disabled: 'disabled'` to the relevant text fields.
+Notice that it takes a while to get our position. We can disable the two fields to prevent the user from touching them. Just add `readonly: true` to the relevant text fields.
 
 Time to add a map. This time we will need JavaScript to link the fields to the marker on display.
 
@@ -727,9 +727,54 @@ if (($('#incident_latitude').val() === "") || ($('#incident_longitude').val() ==
 }
 ```
 
-Things are getting a bit messy. We can put all this JS in a separate file in which we define a function and then we simply call the function from our view. There are hundreds of articles on the best practices 
+Things are getting a bit messy. We can put all this JS in a separate file in which we define a function and then we simply call the function from our view. There are hundreds of articles on best practices to integrate JS in Rails applications that you can read. The earlier you think about organizing your JS code the better.
 
 ## Moving the marker
+
+We remain in the JavaScript realm for a while to allow the user to update the incident location by dragging the marker. This requires us to add some lines to `incidents.js` when we create the marker. Here we show the easy solution but beware that it is not particularly elegant. There are a few ways to make your code more maintainable and readable that we are not exploring in this workshop (you should learn [CoffeeScript](http://coffeescript.org/) and take a look at [ES6](https://github.com/lukehoban/es6features) among other things).
+
+```js
+var marker = L.marker(new L.latLng(lat, lng), { draggable: true });
+marker.on('dragend', function (e) {
+  $('#incident_latitude').val(e.target.getLatLng().lat);
+  $('#incident_longitude').val(e.target.getLatLng().lng);
+});
+marker.addTo(map);
+```
+
+**Exercise** How do we make this work also in `incidents#edit`?
+
+## Reverse Geocoding
+
+What if we wanted a more human readable location? We can use some API (e.g. Google Maps API) to convert latitude and longitude into a location string. [Geocoder](https://github.com/alexreisner/geocoder) is a very popular gem to do just that.
+
+Let's first add a new field to incidents to store the address.
+
+```bash
+rails g migration AddLocationToIncidents location:string
+rake db:migrate
+```
+
+We add `geocoder` to our Gemfile.
+
+```ruby
+gem 'geocoder'
+```
+
+Now, we need to tell the to our Incident model to reverse geocode after validation based on the latitude and longitude provided.
+
+```ruby
+# incident.rb
+reverse_geocoded_by :latitude, :longitude, address: :location
+after_validation :reverse_geocode  # auto-fetch location
+```
+
+Finally, we display it in the view
+
+```erb
+<dt>Approximate location:</dt>
+<dd><%= @incident.location %></dd>
+```
 
 ## Sending emails
 
