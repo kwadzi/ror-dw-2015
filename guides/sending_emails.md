@@ -70,6 +70,31 @@ Add this line to the `development.rb` initializer.
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ~~~
 
+### How do we test/preview the email?
+
+Go on `localhost:3000/rails/mailers`. This is very useful to preview the email body.
+
+Edit the file `test/mailers/previews/incident_mailer_preview.rb`
+
+~~~ruby
+def new_incident
+	IncidentMailer.new_incident(Incident.first)
+end
+~~~
+
+For testing the delivery of the message you could use a real email address for the recipient (but it will soon cause problems...) or you can *catch* the message before it is actually sent.
+
+#### Mailcatcher
+
+Install `gem install mailcatcher`, configure the app for using it and go to `http://localhost:1080` to see the emails.
+
+Add this to the `development.rb`
+
+~~~ruby
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+~~~
+
 ### Create the Observer
 
 What is an **Observer**? Observer classes respond to life cycle callbacks to implement trigger-like behavior outside the original class. This is a great way to reduce the clutter that normally comes when the model class is burdened with functionality that doesn’t pertain to the core responsibility of the class.
@@ -109,27 +134,4 @@ def after_create incident
 end
 ~~~
 
-### How do we test/preview the email?
-
-Go on `localhost:3000/rails/mailers`. This is very useful to preview the email body.
-
-Edit the file `test/mailers/previews/incident_mailer_preview.rb`
-
-~~~ruby
-def new_incident
-	IncidentMailer.new_incident(Incident.first)
-end
-~~~
-
-For testing the delivery of the message you could use a real email address for the recipient (but it will soon cause problems...) or you can *catch* the message before it is actually sent.
-
-#### Mailcatcher
-
-Install `gem install mailcatcher`, configure the app for using it and go to `localhost:1080` to see the emails.
-
-Add this to the `development.rb`
-
-~~~ruby
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
-~~~
+And try it by creating a new incident and see the message in Mailcatcher (http://localhost:1080).
